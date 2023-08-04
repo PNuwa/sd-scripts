@@ -864,10 +864,13 @@ def setup_parser() -> argparse.ArgumentParser:
     return parser
 
 
-if __name__ == "__main__":
+def main():
     parser = setup_parser()
 
     args = parser.parse_args()
     args = train_util.read_config_from_file(args, parser)
 
     train(args)
+
+if __name__ == '__main__':
+  main()
